@@ -1,0 +1,26 @@
+[2024-12-15 20:31:06,904] 36 root - INFO - Initializing Gemini Embedding model...
+[2024-12-15 20:31:07,152] 43 root - INFO - Processing documents into embeddings...
+[2024-12-15 20:31:07,152] 61 root - INFO - Creating vector store index from documents...
+[2024-12-15 20:31:07,152] 70 root - ERROR - An error occurred during the embedding process.
+Traceback (most recent call last):
+  File "c:\users\nysad\documents\qasystem\QAWithPDF\embedding.py", line 62, in download_gemini_embedding
+    index = VectorStoreIndex.from_documents(processed_documents)
+  File "C:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\indices\base.py", line 110, in from_documents
+    docstore.set_document_hash(doc.get_doc_id(), doc.hash)
+AttributeError: 'DocumentWrapper' object has no attribute 'hash'
+[2024-12-15 20:31:07,152] 43 root - ERROR - Exception details:
+Traceback (most recent call last):
+  File "c:\users\nysad\documents\qasystem\QAWithPDF\embedding.py", line 62, in download_gemini_embedding
+    index = VectorStoreIndex.from_documents(processed_documents)
+  File "C:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\indices\base.py", line 110, in from_documents
+    docstore.set_document_hash(doc.get_doc_id(), doc.hash)
+AttributeError: 'DocumentWrapper' object has no attribute 'hash'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\qawithpdf\test_embedding.py", line 27, in <module>
+    query_engine = download_gemini_embedding(model, mock_documents)
+  File "c:\users\nysad\documents\qasystem\QAWithPDF\embedding.py", line 71, in download_gemini_embedding
+    raise customexception(e, sys)
+exception.customexception: Error occured in python script name [c:\users\nysad\documents\qasystem\QAWithPDF\embedding.py] line number [62] error message ['DocumentWrapper' object has no attribute 'hash']

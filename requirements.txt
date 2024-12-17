@@ -1,0 +1,15 @@
+llama-index
+llama-index-llms-gemini
+llama-index-embeddings-gemini
+google-generativeai
+pypdf
+python-dotenv
+python-docx
+streamlit
+IPython
+pytest
+PyPDF2
+aiofiles
+docx2txt
+# Local setup
+-e .

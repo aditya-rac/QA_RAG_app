@@ -1,0 +1,105 @@
+[2024-12-15 23:06:22,515] 18 root - INFO - Data loading started...
+[2024-12-15 23:06:22,515] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-15 23:06:28,161] 36 root - INFO - Data loading completed successfully. 19 document(s) loaded.
+[2024-12-15 23:06:28,691] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-15 23:06:29,128] 29 root - INFO - Processing documents into embeddings...
+[2024-12-15 23:06:36,281] 35 root - INFO - Embedding index created successfully.
+[2024-12-15 23:06:48,818] 18 root - INFO - Data loading started...
+[2024-12-15 23:06:48,820] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-15 23:06:48,861] 36 root - INFO - Data loading completed successfully. 1 document(s) loaded.
+[2024-12-15 23:06:49,206] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-15 23:06:49,214] 29 root - INFO - Processing documents into embeddings...
+[2024-12-15 23:06:52,158] 35 root - INFO - Embedding index created successfully.
+[2024-12-16 01:25:27,922] 18 root - INFO - Data loading started...
+[2024-12-16 01:25:27,922] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 01:25:27,953] 36 root - INFO - Data loading completed successfully. 1 document(s) loaded.
+[2024-12-16 01:25:28,338] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-16 01:25:28,347] 29 root - INFO - Processing documents into embeddings...
+[2024-12-16 01:25:31,537] 35 root - INFO - Embedding index created successfully.
+[2024-12-16 01:25:42,286] 18 root - INFO - Data loading started...
+[2024-12-16 01:25:42,286] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 01:25:42,323] 36 root - INFO - Data loading completed successfully. 1 document(s) loaded.
+[2024-12-16 01:25:42,667] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-16 01:25:42,667] 29 root - INFO - Processing documents into embeddings...
+[2024-12-16 01:25:46,081] 35 root - INFO - Embedding index created successfully.
+[2024-12-16 01:26:09,857] 18 root - INFO - Data loading started...
+[2024-12-16 01:26:09,857] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 01:26:09,857] 40 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 114, in load_data
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 551, in load_file
+    docs = reader.load_data(input_file, **kwargs)
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 116, in load_data
+    raise ImportError(
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\QAWithPDF\data_ingestion.py", line 30, in load_data
+    documents = loader.load_data()
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 711, in load_data
+    SimpleDirectoryReader.load_file(
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 555, in load_file
+    raise ImportError(str(e))
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`
+[2024-12-16 01:26:11,673] 18 root - INFO - Data loading started...
+[2024-12-16 01:26:11,673] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 01:26:11,676] 40 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 114, in load_data
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 551, in load_file
+    docs = reader.load_data(input_file, **kwargs)
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 116, in load_data
+    raise ImportError(
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\QAWithPDF\data_ingestion.py", line 30, in load_data
+    documents = loader.load_data()
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 711, in load_data
+    SimpleDirectoryReader.load_file(
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 555, in load_file
+    raise ImportError(str(e))
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`
+[2024-12-16 01:26:31,811] 18 root - INFO - Data loading started...
+[2024-12-16 01:26:31,811] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 01:26:31,811] 40 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 114, in load_data
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 551, in load_file
+    docs = reader.load_data(input_file, **kwargs)
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\readers\file\docs\base.py", line 116, in load_data
+    raise ImportError(
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\QAWithPDF\data_ingestion.py", line 30, in load_data
+    documents = loader.load_data()
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 711, in load_data
+    SimpleDirectoryReader.load_file(
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 555, in load_file
+    raise ImportError(str(e))
+ImportError: docx2txt is required to read Microsoft Word files: `pip install docx2txt`

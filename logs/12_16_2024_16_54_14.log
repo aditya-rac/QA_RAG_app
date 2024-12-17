@@ -1,0 +1,34 @@
+[2024-12-16 16:54:37,814] 19 root - INFO - Data loading started...
+[2024-12-16 16:54:37,814] 20 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 16:54:37,834] 51 root - INFO - Data loading completed successfully. 1 document(s) loaded.
+[2024-12-16 16:54:38,315] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-16 16:54:38,821] 29 root - INFO - Processing documents into embeddings...
+[2024-12-16 16:54:41,309] 35 root - INFO - Embedding index created successfully.
+[2024-12-16 16:55:00,661] 19 root - INFO - Data loading started...
+[2024-12-16 16:55:00,661] 20 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 16:55:00,677] 55 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\QAWithPDF\data_ingestion.py", line 32, in load_data
+    loader = SimpleDirectoryReader(input_dir=data_path, required_exts=[".pdf", ".txt"])
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 277, in __init__
+    self.input_files = self._add_files(self.input_dir)
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 355, in _add_files
+    raise ValueError(f"No files found in {input_dir}.")
+ValueError: No files found in C:\Users\nysad\AppData\Local\Temp\tmp1qt3excs.
+[2024-12-16 16:55:12,437] 19 root - INFO - Data loading started...
+[2024-12-16 16:55:12,437] 20 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 16:55:13,957] 51 root - INFO - Data loading completed successfully. 19 document(s) loaded.
+[2024-12-16 16:55:14,350] 22 root - INFO - Initializing Gemini Embedding model...
+[2024-12-16 16:55:14,362] 29 root - INFO - Processing documents into embeddings...
+[2024-12-16 16:55:21,350] 35 root - INFO - Embedding index created successfully.
+[2024-12-16 16:55:38,237] 19 root - INFO - Data loading started...
+[2024-12-16 16:55:38,237] 20 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 16:55:38,239] 55 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "C:\Users\nysad\Documents\qasystem\QAWithPDF\data_ingestion.py", line 32, in load_data
+    loader = SimpleDirectoryReader(input_dir=data_path, required_exts=[".pdf", ".txt"])
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 277, in __init__
+    self.input_files = self._add_files(self.input_dir)
+  File "c:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 355, in _add_files
+    raise ValueError(f"No files found in {input_dir}.")
+ValueError: No files found in C:\Users\nysad\AppData\Local\Temp\tmpsylplaat.

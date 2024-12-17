@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: QApplication
+Version: 0.0.3
+Summary: A modified version of QApplication, originally by Sunny Savita, replacing the deprecated ServiceContext module with the updated Setting module.
+Home-page: https://github.com/aditya-rac/QA_RAG_application
+Author: Aditya
+Author-email: nysaditya@gmail.com
+Project-URL: Original Repository, https://github.com/sunnysavita10/Information-Retrival-Using-LlamaIdex-and-Google_Gemini
+Project-URL: Modified Repository, https://github.com/aditya-rac/QA_RAG_application
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9

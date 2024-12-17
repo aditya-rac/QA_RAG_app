@@ -1,0 +1,4 @@
+[2024-12-16 16:40:19,275] 19 root - INFO - Data loading started...
+[2024-12-16 16:40:19,285] 20 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-16 16:40:19,549] 40 root - INFO - Loading DOCX file: sample.docx
+[2024-12-16 16:40:19,570] 51 root - INFO - Data loading completed successfully. 3 document(s) loaded.

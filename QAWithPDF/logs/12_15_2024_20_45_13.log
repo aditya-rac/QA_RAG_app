@@ -1,0 +1,22 @@
+[2024-12-15 20:45:13,887] 18 root - INFO - Data loading started...
+[2024-12-15 20:45:13,887] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-15 20:45:16,365] 36 root - INFO - Data loading completed successfully. 2 document(s) loaded.
+[2024-12-15 20:45:16,365] 18 root - INFO - Data loading started...
+[2024-12-15 20:45:16,365] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-15 20:45:16,365] 25 root - ERROR - The specified directory 'C:\Users\nysad\Documents\qasystem\qawithpdf\invalid_dir' does not exist.
+[2024-12-15 20:45:16,365] 40 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "c:\users\nysad\documents\qasystem\QAWithPDF\data_ingestion.py", line 26, in load_data
+    raise FileNotFoundError(f"The directory '{data_path}' does not exist.")
+FileNotFoundError: The directory 'C:\Users\nysad\Documents\qasystem\qawithpdf\invalid_dir' does not exist.
+[2024-12-15 20:45:16,365] 18 root - INFO - Data loading started...
+[2024-12-15 20:45:16,365] 19 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-15 20:45:16,365] 40 root - ERROR - An exception occurred during data loading.
+Traceback (most recent call last):
+  File "c:\users\nysad\documents\qasystem\QAWithPDF\data_ingestion.py", line 29, in load_data
+    loader = SimpleDirectoryReader(input_dir=data_path)
+  File "C:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 277, in __init__
+    self.input_files = self._add_files(self.input_dir)
+  File "C:\Users\nysad\Documents\qasystem\venv\lib\site-packages\llama_index\core\readers\file\base.py", line 355, in _add_files
+    raise ValueError(f"No files found in {input_dir}.")
+ValueError: No files found in C:\Users\nysad\Documents\qasystem\qawithpdf\test_data_ingestion\empty.
