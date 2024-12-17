@@ -19,13 +19,12 @@ For the original implementation and detailed guide, follow Sunny Suvita's YouTub
 
 3. **Improved Streamlit App**:
    - Files are **saved temporarily** before processing for compatibility with LlamaIndex.
-   - **Tabular responses** are rendered cleanly using Markdown.
-   - Non-tabular responses display as plain text.
 
 4. **Unit Testing**:
    - Added tests for:
      - **Data Ingestion** (`test_ingestion.py`) – Verifies file handling for TXT, PDF, DOCX, and JSON.
      - **Embeddings** (`test_embeddings.py`) – Ensures embedding creation and query functionality.
+     - **StreamLitApp** (`test_streamlit.py`) – Ensures embedding creation and query functionality.
 
 ---
 
