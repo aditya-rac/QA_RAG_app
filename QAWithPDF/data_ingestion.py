@@ -29,28 +29,31 @@ def load_data(data_dir):
 
         documents = []
 
-        # Use SimpleDirectoryReader for TXT and PDF
-        loader = SimpleDirectoryReader(input_dir=data_path, required_exts=[".txt", ".pdf"])
-        documents.extend(loader.load_data())
+        # Process TXT and PDF files using SimpleDirectoryReader
+        txt_pdf_files = [file for file in os.listdir(data_path) if file.endswith((".txt", ".pdf"))]
+        if txt_pdf_files:
+            logging.info("Using SimpleDirectoryReader for TXT and PDF files...")
+            loader = SimpleDirectoryReader(input_dir=data_path, required_exts=[".txt", ".pdf"])
+            documents.extend(loader.load_data())
 
-        # Use DocxReader for DOCX files
+        # Process DOCX files using DocxReader
         docx_reader = DocxReader()
         for file in os.listdir(data_path):
             if file.endswith(".docx"):
                 file_path = os.path.join(data_path, file)
-                logging.info(f"Loading DOCX file: {file}")
+                logging.info(f"Using DocxReader to load DOCX file: {file_path}")
                 documents.extend(docx_reader.load_data(file_path))
 
-        # Use JSONReader for JSON files
+        # Process JSON files using JSONReader
         json_reader = JSONReader()
         for file in os.listdir(data_path):
             if file.endswith(".json"):
                 file_path = os.path.join(data_path, file)
-                logging.info(f"Loading JSON file: {file}")
+                logging.info(f"Using JSONReader to load JSON file: {file_path}")
                 documents.extend(json_reader.load_data(input_file=file_path, extra_info={}))
 
         if not documents:
-            logging.error(f"No valid documents found in the directory: {data_path}")
+            logging.error("No valid documents found in the specified directory.")
             raise ValueError("No valid documents to load.")
 
         logging.info(f"Data loading completed successfully. {len(documents)} document(s) loaded.")
