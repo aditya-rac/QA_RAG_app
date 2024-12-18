@@ -1,9 +1,6 @@
 import os
 import tempfile
 import streamlit as st
-from llama_index.core import SimpleDirectoryReader
-from llama_index.readers.file.docs import DocxReader
-from llama_index.readers.json import JSONReader
 from QAWithPDF.data_ingestion import load_data
 from QAWithPDF.embedding import download_gemini_embedding
 from QAWithPDF.model_api import load_model
@@ -19,28 +16,6 @@ def save_uploaded_file(uploaded_file):
         f.write(uploaded_file.getbuffer())
     return file_path, temp_dir
 
-def process_document(file_path, temp_dir):
-    """
-    Process the uploaded file based on its extension.
-    """
-    if file_path.endswith(".docx"):
-        # Use DocxReader for DOCX files
-        st.info("Using DocxReader to process DOCX file...")
-        docx_reader = DocxReader()
-        return docx_reader.load_data(file_path)
-
-    elif file_path.endswith(".json"):
-        # Use JSONReader for JSON files
-        st.info("Using JSONReader to process JSON file...")
-        json_reader = JSONReader()
-        return json_reader.load_data(input_file=file_path, extra_info={})
-
-    else:
-        # Use SimpleDirectoryReader for TXT and PDF
-        st.info("Using SimpleDirectoryReader for PDF/TXT files...")
-        loader = SimpleDirectoryReader(input_dir=temp_dir, required_exts=[".txt", ".pdf"])
-        return loader.load_data()
-
 # Streamlit UI
 st.title("Ask Your Question")
 
@@ -54,10 +29,10 @@ if uploaded_file:
             # Save the uploaded file
             file_path, temp_dir = save_uploaded_file(uploaded_file)
 
-            # Process the document based on its type
-            documents = process_document(file_path, temp_dir)
+            # Use load_data from data_ingestion.py to process documents
+            documents = load_data(temp_dir)
 
-            # Load model and create embeddings
+            # Load the model and create embeddings
             model = load_model()
             query_engine = download_gemini_embedding(model, documents)
 
