@@ -1,0 +1,6 @@
+[2024-12-17 17:58:51,815] 20 root - INFO - Data loading started...
+[2024-12-17 17:58:51,815] 21 root - INFO - Supported file formats: PDF, TXT, DOCX, JSON.
+[2024-12-17 17:58:51,816] 35 root - INFO - Using SimpleDirectoryReader for TXT and PDF files...
+[2024-12-17 17:58:51,817] 44 root - INFO - Using DocxReader to load DOCX file: C:\Users\nysad\Documents\qasystem\qawithpdf\test_data\sample.docx
+[2024-12-17 17:58:51,817] 52 root - INFO - Using JSONReader to load JSON file: C:\Users\nysad\Documents\qasystem\qawithpdf\test_data\sample.json
+[2024-12-17 17:58:51,817] 59 root - INFO - Data loading completed successfully. 3 document(s) loaded.
